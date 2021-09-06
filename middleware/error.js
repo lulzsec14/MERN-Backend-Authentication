@@ -12,7 +12,7 @@ const errorHandler = (err, req, res, next) => {
     error = new ErrorResponse(message, 400);
   }
 
-  if (err.name === "ValidationError") {
+  if (err.name === "Validation Error") {
     const message = Object.values(err.errors).map((val) => val.message);
     error = new ErrorResponse(message, 400);
   }
